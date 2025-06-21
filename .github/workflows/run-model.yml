@@ -25,3 +25,9 @@ jobs:
 
     - name: 🚀 Run model.py
       run: python model.py
+
+    - name: 📤 Upload model artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: trained-model
+        path: model.pkl
