@@ -1,4 +1,4 @@
-name: Run ML Model
+name: Run ML Model with DVC + W&B
 
 on:
   push:
@@ -19,10 +19,17 @@ jobs:
 
     - name: 📦 Install dependencies
       run: |
-        pip install scikit-learn wandb
+        pip install scikit-learn wandb dvc[gdrive]
 
-    - name: 🔐 Login to Weights & Biases
-      run: wandb login ${{ secrets.WANDB_API_KEY }}
+    - name: 🔐 Save GDrive Service Account Key
+      run: |
+        echo "${{ secrets.GDRIVE_KEY }}" > gdrive-creds.json
+
+    - name: 📁 DVC Pull Dataset
+      run: |
+        dvc remote modify myremote gdrive_use_service_account true
+        dvc remote modify myremote gdrive_service_account_json_file_path gdrive-creds.json
+        dvc pull
 
     - name: 🚀 Run model.py
       run: python model.py
