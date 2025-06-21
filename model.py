@@ -1,3 +1,7 @@
+import wandb
+wandb.init(project="mlops-demo", name="model-training")
+
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
@@ -19,6 +23,8 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print("✅ Training complete!")
 print(f"🎯 Accuracy: {accuracy}")
+
+wandb.log({"accuracy": accuracy})
 
 # ✅ Save model
 with open("model.pkl", "wb") as f:

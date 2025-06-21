@@ -2,8 +2,7 @@ name: Run ML Model
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   run-model:
@@ -20,7 +19,10 @@ jobs:
 
     - name: 📦 Install dependencies
       run: |
-        pip install scikit-learn
+        pip install scikit-learn wandb
+
+    - name: 🔐 Login to Weights & Biases
+      run: wandb login ${{ secrets.WANDB_API_KEY }}
 
     - name: 🚀 Run model.py
       run: python model.py
