@@ -1,6 +1,3 @@
-Here's an improved, more professional, and visually appealing version of your README.md with better structure and formatting:
-
-```markdown
 # 🚀 End-to-End MLOps Workflow with GitHub Actions, DVC & Weights & Biases
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Hasee10/ML_ST/run-model.yml?label=CI/CD%20Pipeline)
