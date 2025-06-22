@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 2. **DVC Remote Storage**:
    ```bash
-   dvc remote add --default myremote gdrive://your-folder-id
+   dvc remote add --default myremote gdrive://1uGtJsdEwErQsuhUrLdMbPqM-emeQU6ow?usp=drive_link
    ```
 
 ### Running the Pipeline
@@ -124,21 +124,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## ✉️ Contact
 
 For questions or suggestions, please contact:
-- [Your Name](mailto:your.email@example.com)
-- [Project GitHub Issues](https://github.com/Hasee10/ML_ST/issues)
+- Haseeb Arshad(mailto:ihaseebarshad10l@gmail.com)
+- Hasee10(https://github.com/Hasee10/ML_ST/issues)
 ```
 
-Key improvements made:
-1. Added professional badges at the top
-2. Created a features table for better readability
-3. Added architecture diagram using mermaid syntax
-4. Improved setup instructions with proper formatting
-5. Better organized repository structure
-6. Added monitoring section with W&B integration
-7. Included contribution guidelines
-8. Added license and contact sections
-9. Consistent emoji usage for visual cues
-10. Better code block formatting
-11. Clearer separation of sections
-
-This version is more comprehensive, visually appealing, and follows best practices for open-source project documentation.
